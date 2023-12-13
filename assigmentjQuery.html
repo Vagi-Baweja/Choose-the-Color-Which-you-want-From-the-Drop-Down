@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>jQuery Assignment</title>
+    <style>
+        body {
+            border: 5px solid black;
+            background-color: antiquewhite;
+            
+        }
+        select {
+            height: 50px;
+            width: 500px;
+            margin-left: 30%;
+            margin-top: 10%;
+        }
+
+        #box {
+            height: 100px;
+            width: 900px;
+            margin-left: 30%;
+            margin-top: 10%;
+            border: 3px solid black;
+            margin: auto;
+            text-align: center;
+            text-align-last: center;
+
+        }
+
+        h1 {
+            color: tomato;
+            text-align: center;
+        }
+
+        #a {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #b {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        #c {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        #d {
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+        }
+
+        #e {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        #f {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width:100%;
+            background-color: crimson;
+            color: white;
+            text-align: center;
+
+        
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Fill the color in the box by selecting the color from the Drop Down Box</h1>
+    <div class="color-selector">
+        <label for="color-dropdown"> </label>
+        <select id="se">
+            <option value="">Select the Color</option>
+            <option id="a" value="red ">Red</option>
+            <option id="b" value="green">Green</option>
+            <option id="c" value="blue">Blue</option>
+            <option id="d" value="violet">Violet</option>
+            <option id="e" value="yellow">Yellow</option>
+            <option id="f" value="brown">Brown</option>
+        </select>
+    </div> <br> <br> <br>
+
+
+    <div id="box">When you choose the color from the drop down it will visible in Me!!!!</div> <br><br><br>
+
+    
+    
+       <div class="footer">
+        <p>© Vagish Baweja. All rights reserved.</p>
+      </div
+   
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("#se").change(function () {
+            let clr = document.getElementById("se").value;
+            $("#box").css('background-color', clr);
+        });
+
+    });
+
+</script>
+
+</html>
